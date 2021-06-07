@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>La palabra generada es</h1>
+        <h1>
+            {{ palabra }}
+        </h1>
+        <br>
+        <h3>Este es el intento #{{ request.session.counter }}</h3>
+        <form action="/random_word" method="get">
+            <button type="submit">Generar palabra</button>
+        </form>
+        <form action="/" method="get">
+            <button type="submit">Resetear contador </button>
+        </form>
+    </div>
+</body>
+
+</html>
